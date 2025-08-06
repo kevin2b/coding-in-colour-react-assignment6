@@ -1,60 +1,226 @@
-/** Variables Import **/
-@import url('./variables.css');
+@import "./variables.css";
 
-/**
- * CSS Reset
- * Source: https://www.joshwcomeau.com/css/custom-css-reset/
-*/
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-  box-sizing: border-box;
+:root {
+  font-family: var(--ff-base);
+  min-inline-size: var(--minWidth);
+  background-color: var(--clr-background-primary);
+  padding-inline: 1rem;
 }
-/* 2. Remove default margin */
-* {
+
+.wrapper {
+  --inline-padding: 2rem;
+  --border-radius: 0.5rem;
+  max-inline-size: var(--maxWidth-mobile);
+  margin-inline: auto;
+  font-size: var(--font-text);
+  margin-block: 5rem;
+}
+
+.article__img {
+  display: block;
+  max-inline-size: 100%;
+  inline-size: 100%;
+  max-block-size: 13rem;
+  object-fit: cover;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.article__body {
+  background-color: var(--clr-background-secondary);
+  padding-inline: var(--inline-padding);
+  padding-block: 2.5rem 1rem;
+  color: var(--clr-font-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article__heading {
+  font-size: var(--font-heading);
+  line-height: 1.5;
+}
+
+.article__summary {
+  line-height: 1.5;
+  color: var(--clr-font-secondary);
+}
+
+.article__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--clr-background-secondary);
+  padding-block: 1rem;
+  padding-inline: var(--inline-padding);
+  min-block-size: 4.5rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.js-article__footer--share-mobile,
+.article__footer-share {
+  background-color: var(--clr-background-tertiary);
+}
+
+.article__footer-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer__user-img {
+  display: block;
+  max-inline-size: 2.5rem;
+  inline-size: 2.5rem;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.js-footer--hidden-mobile {
+  display: none;
+}
+
+.article__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.article__user {
+  font-weight: 700;
+}
+
+.article__date {
+  color: var(--clr-font-tertiary);
+}
+
+.article__footer-share {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: var(--clr-font-tertiary);
+  align-items: center;
+}
+
+.share__text {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.share__img {
+  display: block;
+  max-inline-size: 1.2rem;
+  inline-size: 1.2rem;
+  block-size: auto;
+  object-fit: cover;
+}
+
+.share__button {
+  margin-inline-start: auto;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--clr-background-primary);
+}
+
+.share__icon {
+  display: block;
+  inline-size: 0.8rem;
+  block-size: 0.8rem;
+  object-fit: fill;
+}
+
+.share__button--hover:hover,
+.share__button--hover:focus-visible {
+  cursor: pointer;
+}
+
+.js-share__button--selected {
+  background-color: var(--clr-background-4);
+}
+
+.js-share__icon--selected {
+  filter: brightness(0) invert(1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
   margin: 0;
 }
-body {
-  /* 3. Add accessible line-height */
-  line-height: 1.5;
-  /* 4. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-}
-/* 5. Improve media defaults */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-/* 6. Inherit fonts for form controls */
-input, button, textarea, select {
-  font: inherit;
-}
-/* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-/* 8. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-/*
-  9. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
 }
 
-/** Global CSS **/
-/* We recommend writing minimal component-specific CSS here */
-
-
-/** Attribution CSS **/
-.attribution { 
-  font-size: 13px; 
-  text-align: center; 
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
+
+@media (min-width: 48.001rem) {
+  .wrapper {
+    max-inline-size: var(--maxWidth-desktop);
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  }
+
+  .article__img {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+
+  .article__img {
+    max-block-size: none;
+    block-size: 100%;
+    object-position: left center;
+  }
+
+  .article__footer {
+    position: relative;
+    background-color: var(--clr-background-secondary);
+    border-radius: 0 0 var(--border-radius) 0;
+  }
+
+  .article__body {
+    border-radius: 0 var(--border-radius) 0 0;
+  }
+
+  #js-article__footer-wrapper-default {
+    display: block;
+  }
+
+  #js-article__footer-wrapper-share {
+    position: absolute;
+    right: -3.5rem;
+    top: -3rem;
+  }
+
+  #js-article__footer-wrapper-share::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 42%;
+    bottom: -0.75rem;
+    border-inline-start: 1.5rem solid transparent;
+    border-inline-end: 1.5rem solid transparent;
+    border-block-start: 1.5rem solid var(--clr-background-tertiary);
+  }
+
+  .article__footer-share {
+    padding-block: 0.75rem;
+    padding-inline: 1.5rem;
+    border-radius: 0.5rem;
+  }
 }

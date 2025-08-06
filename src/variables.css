@@ -1,19 +1,29 @@
 :root {
-  /** Layouts **/
-  --layout-mobile: 375px;
-  --layout-desktop: 1440px;
-
-  /** Colours **/
-  --clr-veryDarkGrayishBlue: hsl(217, 19%, 35%);
-  --clr-desaturatedDarkBlue: hsl(214, 17%, 51%);
-  --clr-grayishBlue: hsl(212, 23%, 69%);
-  --clr-lightGrayishBlue: hsl(210, 46%, 95%);
-
-  /** Typography **/
-  --font-paragraph: 13px; 
-
-  --fw-regular: 500;
-  --fw-bold: 700;
+  --minWidth: 18.75rem;
+  --maxWidth-mobile: 20.5rem;
+  --maxWidth-desktop: 42rem;
 
   --ff-base: "Manrope", sans-serif;
+  --font-text: 0.84rem;
+  --font-heading: 1rem;
+
+  @media (min-width: 48.001rem) {
+    --font-text: 0.75rem;
+    --font-heading: 1.2rem;
+  }
+
+  --clr-darkGrayBlue: hsl(217, 19%, 35%);
+  --clr-desatDarkGrayBlue: hsl(214, 17%, 51%);
+  --clr-grayBlue: hsl(212, 23%, 69%);
+  --clr-lightGrayBlue: hsl(210, 46%, 95%);
+  --clr-white: white;
+
+  --clr-background-primary: var(--clr-lightGrayBlue);
+  --clr-background-secondary: var(--clr-white);
+  --clr-background-tertiary: var(--clr-darkGrayBlue);
+  --clr-background-4: var(--clr-desatDarkGrayBlue);
+
+  --clr-font-primary: var(--clr-darkGrayBlue);
+  --clr-font-secondary: var(--clr-desatDarkGrayBlue);
+  --clr-font-tertiary: var(--clr-grayBlue);
 }
