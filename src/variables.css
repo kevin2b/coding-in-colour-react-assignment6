@@ -1,0 +1,19 @@
+:root {
+  /** Layouts **/
+  --layout-mobile: 375px;
+  --layout-desktop: 1440px;
+
+  /** Colours **/
+  --clr-veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --clr-desaturatedDarkBlue: hsl(214, 17%, 51%);
+  --clr-grayishBlue: hsl(212, 23%, 69%);
+  --clr-lightGrayishBlue: hsl(210, 46%, 95%);
+
+  /** Typography **/
+  --font-paragraph: 13px; 
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+
+  --ff-base: "Manrope", sans-serif;
+}
