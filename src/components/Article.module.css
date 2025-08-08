@@ -1,0 +1,16 @@
+.wrapper {
+  --inline-padding: 2rem;
+  --border-radius: 0.5rem;
+  max-inline-size: var(--maxWidth-mobile);
+  margin-inline: auto;
+  font-size: var(--font-text);
+  margin-block: 5rem;
+}
+
+@media (min-width: 48.001rem) {
+  .wrapper {
+    max-inline-size: var(--maxWidth-desktop);
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  }
+}

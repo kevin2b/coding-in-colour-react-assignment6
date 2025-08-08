@@ -2,16 +2,16 @@ import share from '@images/icon-share.svg'
 import DefaultFooter from './DefaultFooter/DefaultFooter';
 import ShareFooter from './ShareFooter/ShareFooter';
 import { useState, useEffect } from 'react';
+import styles from './ArticleFooter.module.css'
 
 function ArticleFooter (){
   const [showShare, setShare] = useState(false);
-  
   const handleShareClick = () => {
     setShare(prev => !prev);
   }
 
   const handleClickOutside = (event) => {
-    if (!event.target.closest(".article__footer")) {
+    if (!event.target.closest(`.${styles.article__footer}`)) {
       setShare(false);
     }
   }
@@ -35,11 +35,11 @@ function ArticleFooter (){
   }, [showShare]);
 
   return (
-    <div className={`article__footer ${showShare? "js-article__footer--share-mobile":""} `} id="js-article__footer">
+    <div className={`${styles.article__footer} ${showShare? styles["article__footer--share-mobile"]:""} `}>
       <DefaultFooter share={showShare}/>
       <ShareFooter share={showShare}/>
-      <button type="button" className={`share__button share__button--hover ${showShare? "js-share__button--selected":""}`} id="js-share__button" onClick={handleShareClick}>
-        <img src={share} alt="Share icon" className={`share__icon ${showShare? "js-share__icon--selected":""}`} id="js-share__icon" />
+      <button type="button" className={`${styles.share__button} ${showShare? styles["share__button--selected"]:""}`} onClick={handleShareClick}>
+        <img src={share} alt="Share icon" className={`${styles.share__icon} ${showShare? styles["share__icon--selected"]:""}`} />
       </button>
     </div>
   );

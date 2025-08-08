@@ -1,12 +1,13 @@
 import ArticleImage from './ArticleImage/ArticleImage'
 import ArticleBody from './ArticleBody/ArticleBody'
 import ArticleFooter from './ArticleFooter/ArticleFooter'
+import styles from './Article.module.css';
 
 function Article(){
   return (
-    <article className="wrapper">
+    <article className={styles.wrapper}>
       <ArticleImage />
-      <div className="article__body-wrapper">
+      <div>
         <ArticleBody />
         <ArticleFooter />
       </div>

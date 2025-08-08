@@ -1,0 +1,36 @@
+.article__footer-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer__user-img {
+  display: block;
+  max-inline-size: 2.5rem;
+  inline-size: 2.5rem;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.article__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.article__user {
+  font-weight: 700;
+  color: var(--clr-font-primary);
+}
+
+.article__date {
+  color: var(--clr-font-tertiary);
+}
+
+@media (min-width: 48.001rem) {
+  .article__footer-wrapper-default {
+    display: block;
+  }
+}

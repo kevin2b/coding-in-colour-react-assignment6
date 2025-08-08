@@ -1,0 +1,18 @@
+.article__img {
+  display: block;
+  max-inline-size: 100%;
+  inline-size: 100%;
+  max-block-size: 12.6rem;
+  object-fit: cover;
+  object-position: center -1rem;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+@media (min-width: 48.001rem) {
+  .article__img {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    max-block-size: none;
+    block-size: 100%;
+    object-position: left center;
+  }
+}

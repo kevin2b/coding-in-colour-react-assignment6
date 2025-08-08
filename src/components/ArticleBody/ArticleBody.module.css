@@ -1,0 +1,25 @@
+.article__body {
+  background-color: var(--clr-background-secondary);
+  padding-inline: var(--inline-padding);
+  padding-block: 2.1rem 1.5rem;
+  color: var(--clr-font-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.article__heading {
+  font-size: var(--font-heading);
+  line-height: 1.5;
+}
+
+.article__summary {
+  line-height: 1.5;
+  color: var(--clr-font-secondary);
+}
+
+@media (min-width: 48.001rem) {
+  .article__body {
+    border-radius: 0 var(--border-radius) 0 0;
+  }
+}
