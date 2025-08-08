@@ -12,7 +12,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@images': path.resolve(__dirname, 'images'), // one level above src
+      '@images': path.resolve(__dirname, 'images'),
     }
   },
 })
