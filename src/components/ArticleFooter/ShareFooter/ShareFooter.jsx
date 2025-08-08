@@ -5,7 +5,7 @@ import styles from './ShareFooter.module.css'
 
 function ShareFooter ({share}){
   return (
-    <div className={`${share? "":"js-footer--hidden-mobile"} ${styles["article__footer-wrapper-share"]}`} >
+    <div className={`${share? "":"footer--hidden-mobile"} ${styles["article__footer-wrapper-share"]}`} >
       <div className={styles["article__footer-share"]}>
         <p className={styles.share__text}>
           Share
