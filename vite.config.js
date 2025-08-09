@@ -15,4 +15,8 @@ export default defineConfig({
       '@images': path.resolve(__dirname, 'images'),
     }
   },
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true
+  },
 })
