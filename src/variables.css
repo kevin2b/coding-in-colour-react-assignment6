@@ -1,15 +1,14 @@
 :root {
   --minWidth: 18.75rem;
   --maxWidth-mobile: 20.5rem;
-  --maxWidth-desktop: 42rem;
+  --maxWidth-desktop: 45.5rem;
 
   --ff-base: "Manrope", sans-serif;
   --font-text: 0.84rem;
   --font-heading: 1rem;
 
   @media (min-width: 48.001rem) {
-    --font-text: 0.75rem;
-    --font-heading: 1.2rem;
+    --font-heading: 1.25rem;
   }
 
   --clr-darkGrayBlue: hsl(217, 19%, 35%);

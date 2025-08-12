@@ -9,8 +9,9 @@
 
 @media (min-width: 48.001rem) {
   .wrapper {
+    --inline-padding: 2.5rem;
     max-inline-size: var(--maxWidth-desktop);
     display: grid;
-    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+    grid-template-columns: minmax(0, 3.85fr) minmax(0, 6fr);
   }
 }
