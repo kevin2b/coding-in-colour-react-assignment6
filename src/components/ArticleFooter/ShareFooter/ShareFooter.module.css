@@ -23,8 +23,8 @@
 @media (min-width: 48.001rem) {
   .article__footer-wrapper-share {
     position: absolute;
-    right: -3.5rem;
-    top: -4.8rem;
+    right: -4.65rem;
+    top: -5.1rem;
   }
 
   .article__footer-wrapper-share::after {
@@ -32,7 +32,7 @@
     width: 0;
     height: 0;
     position: absolute;
-    left: 43%;
+    left: 38%;
     bottom: -0.75rem;
     border-inline-start: 1.5rem solid transparent;
     border-inline-end: 1.5rem solid transparent;
@@ -40,8 +40,8 @@
   }
 
   .article__footer-share {
-    padding-block: 1rem;
-    padding-inline: 1.75rem;
-    border-radius: 0.5rem;
+    padding-block: 1.1rem;
+    padding-inline: 2.25rem 2.5rem;
+    border-radius: 0.75rem;
   }
 }

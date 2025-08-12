@@ -17,7 +17,8 @@
 
 .share__button {
   margin-inline-start: auto;
-  padding: 0.5rem;
+  padding-block: 0.6rem;
+  padding-inline: 0.55rem;
   border-radius: 50%;
   border: none;
   background-color: var(--clr-background-primary);
@@ -34,7 +35,7 @@
 
 .share__icon {
   display: block;
-  inline-size: 0.8rem;
+  inline-size: 0.9rem;
   block-size: 0.8rem;
   object-fit: fill;
 }
